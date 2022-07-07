@@ -122,7 +122,7 @@ body {
 }
 
 .vitals-box.heart-rate {
-  right: 20px;
+  right: 30px;
   top: 80px;
   min-width: 110px;
 }
@@ -176,12 +176,13 @@ body {
   color: white;
   padding: 5% 10%;
   min-height: 250px;
-  transition: 0.1s background-color ease-in-out;
+  transition: 0.1s background-color ease-in-out, 0.1s color ease-in-out;
 }
 
 
 .feature:hover {
-  background-color: rgb(95, 95, 95);
+  background-color: whitesmoke/* rgb(95, 95, 95) */;
+  color: rgb(26, 24, 24);
 }
 
 @media screen and (max-width:768px) {
@@ -266,5 +267,10 @@ body {
   .button {
     font-size: 1rem;
     margin: 40px 0 0;
+  }
+
+  .button.button-outline {
+    position: relative;
+    right: -8px;
   }
 }
