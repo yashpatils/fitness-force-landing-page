@@ -10,8 +10,17 @@ body {
   background-color: rgb(43, 43, 43);
 }
 
+#title {
+  background-image: linear-gradient(45deg, transparent 60%, var(--accentColor) 40%);
+}
+
 .button {
   background-color: var(--accentColor);
+}
+
+.join-btn {
+  background-color: white;
+  font-size: 1.25rem;
 }
 
 .notch-bottom-right {
@@ -20,23 +29,38 @@ body {
 }
 
 .container-fluid {
-  padding: 2% 7%;
+  padding: 2% 7% 0;
 }
 
 #heading-container {
-  padding: 12% 0;
+  padding: 10% 0;
 }
 
 #heading {
   color: whitesmoke;
-  font-size: 4.5rem;
+  font-size: 4.75rem;
   font-weight: bold;
+}
+
+.heading-sub {
+  color: whitesmoke;
+  width: 80%;
+  margin-top: 30px;
+}
+
+.navbar-brand {
+  font-size: 1.5rem;
+}
+
+.nav-link {
+  font-size: 1.25rem;
 }
 
 @supports (-webkit-text-stroke: 1px white) {
   #heading .stroke {
     -webkit-text-stroke: 1px white;
     -webkit-text-fill-color: transparent;
+    text-shadow: 0 0 32px whitesmoke;
   }
 }
 
@@ -65,9 +89,182 @@ body {
 }
 
 .get-started-btn {
+  color: white;
   transition: 0.1s filter ease-in-out;
 }
 
 .get-started-btn:hover {
-  filter: brightness(85%);
+  background-color: rgb(188, 91, 18);
+  color: white;
+}
+
+#title-image img {
+  margin-left: 150px;
+  height: min(750px, calc(100vw - 20px));
+  max-width: auto;
+  filter: brightness(90%);
+  margin-top: 30px;
+  margin: 0 auto;
+  display: block;
+}
+
+#title-image {
+  position: relative;
+}
+
+.vitals-box {
+  background: rgb(95, 95, 95);
+  padding: 2% 3%;
+  color: white;
+  border-radius: 5px;
+  position: absolute;
+  box-shadow: 0 1px 6px 0 rgb(26, 26, 26);
+}
+
+.vitals-box.heart-rate {
+  right: 20px;
+  top: 80px;
+  min-width: 110px;
+}
+
+.vitals-box.calories-burned {
+  left: 10px;
+  bottom: 150px;
+}
+
+.vitals-box.heart-rate i {
+  color: #FF4033;
+  margin-top: 10px;
+  margin-bottom: 15px;
+}
+
+.vitals-box i, .vitals-box span {
+  display: block;
+}
+
+.small-grey-text {
+  color: rgb(186, 186, 186);
+  font-size: 0.8rem;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.vitals-box.calories-burned {
+  min-width: 210px;
+}
+
+.vitals-box.calories-burned i {
+  color:rgb(226, 112, 24);
+  font-size: 3rem;
+  vertical-align: middle;
+  margin-top: 3px;
+}
+
+#features {
+  position: relative;
+  padding: 5% 7%;
+  text-align: center;
+  padding-top: 200px;
+  background-image: linear-gradient(-45deg, transparent 60%, var(--accentColor) 40%);
+}
+
+.feature {
+  background-color: rgb(51, 51, 51);
+  box-shadow: 0 1px 10px 0 black;
+  max-width: 250px;
+  margin: auto;
+  color: white;
+  padding: 5% 10%;
+  min-height: 250px;
+  transition: 0.1s background-color ease-in-out;
+}
+
+
+.feature:hover {
+  background-color: rgb(95, 95, 95);
+}
+
+@media screen and (max-width:768px) {
+
+  .navbar-brand {
+    font-size: 1.25rem;
+    margin: 0;
+  }
+
+  .nav-link {
+    font-size: 1rem;
+  }
+
+  .join-btn {
+    font-size: 1rem;
+    margin-top: 10px;
+  }
+
+  #heading-container {
+    text-align: center;
+  }
+  
+  #heading {
+    font-size: 2.5rem;
+    margin: 20px 0;
+  }
+
+  .heading-sub {
+    font-size: 1rem;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .vitals-box.calories-burned,
+  .vitals-box.heart-rate {
+    min-width: 100px;
+  }
+
+  .vitals-box.calories-burned i {
+    font-size: 2rem;
+  }
+
+  .vitals-box.calories-burned .small-grey-text, 
+  .vitals-box.heart-rate .small-grey-text {
+    margin-bottom: 5px;
+    font-size: 0.5rem;
+  }
+
+  .vitals-box.calories-burned .value,
+  .vitals-box.heart-rate .value {
+    font-size: 0.75rem;
+  }
+
+  .vitals-box.calories-burned {
+    bottom: 25px;
+  }
+
+  .vitals-box.heart-rate {
+    top: 15px;
+  }
+
+  #title-image {
+    margin-top: 50px;
+  }
+
+  #title-image img {
+    margin: 0 auto;
+    display: block;
+  }
+
+  #features {
+    background-image: linear-gradient(45deg, transparent 60%, var(--accentColor) 40%);
+  }
+
+  .feature {
+    width: min(250px, calc(100vw - 150px));
+    min-height: fit-content;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+  }
+
+  .button {
+    font-size: 1rem;
+    margin: 40px 0 0;
+  }
 }
